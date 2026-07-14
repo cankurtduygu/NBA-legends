@@ -1,446 +1,169 @@
-## 1. React Nedir?
+# 🏀 NBA Legends
 
-React, kullanıcı arayüzleri (UI) oluşturmak için kullanılan bir JavaScript kütüphanesidir. Sadece görünüm katmanına odaklanır, tam bir framework değildir.
+### An interactive NBA hall-of-fame player browser built with React
 
-### Önemli Noktalar:
-
-- **Facebook (Meta) tarafından geliştirildi**
-- Single Page Application (SPA) yapmak için kullanılır
-- Arayüzler component (bileşen) mantığıyla kurulur
-- Virtual DOM sayesinde ekranı verimli şekilde günceller
-
-
-> React, hızlı ve tekrar kullanılabilir arayüz bileşenleri oluşturmayı sağlar ve sayfa yenilemeden ekranı günceller.
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-nba--legends26.netlify.app-C9082A?style=for-the-badge)](https://nba-legends26.netlify.app/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![React Bootstrap](https://img.shields.io/badge/React_Bootstrap-2-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://react-bootstrap.github.io/)
+[![Create React App](https://img.shields.io/badge/Create_React_App-5-09D3AC?style=for-the-badge&logo=react&logoColor=white)](https://create-react-app.dev/)
+[![Netlify](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://www.netlify.com/)
 
 ---
 
-## 2. Neden React'e İhtiyacımız Var?
+## ✨ Overview
 
-### Vanilla JavaScript Problemleri:
+**NBA Legends** is a responsive single-page React application that showcases 12 of the greatest players in NBA history as interactive flip cards. Each card displays the player's photo and name on the front; clicking reveals career statistics — points, rebounds, assists, and All-Star selections — on the back.
 
-- ❌ DOM ile uğraşmak yavaş ve karmaşık
-- ❌ Uygulama büyüdükçe kod kontrolden çıkar
-- ❌ Aynı UI kodları sürekli tekrar edilir
-- ❌ State (durum) yönetimi zorlaşır
-
-### React Ne Çözer?
-
-- ✅ **Component tabanlı yapı** - Kod tekrarını azaltır
-- ✅ **Declarative yaklaşım** - Ne görmek istediğini söylersin
-- ✅ **Virtual DOM** - Performanslı güncellemeler
-- ✅ **Tek yönlü veri akışı** - Hata ayıklamak kolaylaşır
-- ✅ **Büyük ekosistem** - İş piyasası çok güçlü
-
-
-Küçük projelerde React şart değildir. Ancak gerçek projelerde vanilla JavaScript ölçeklenmez.
+This project was built during my early React learning phase to practice component structure, props, `useState`, `.map()` rendering, conditional JSX, Bootstrap grid layouts, and parent-to-child data flow.
 
 ---
 
-## 3. Component (Bileşen) Nedir?
+## 🖥️ Live Demo
 
-Component şunlardır:
-
-- Genelde bir fonksiyon
-- JSX döndürür
-- Kendi state ve mantığını barındırır
-
-### Örnek:
-
-```javascript
-function Welcome() {
-  return <h1>Merhaba React</h1>;
-}
-```
-
-- Component'ler tekrar kullanılabilir
-- Arayüz, component'lerin birleşimidir
-- Her component kendi dosyasında olmalı
+> 🔗 **[https://nba-legends26.netlify.app/](https://nba-legends26.netlify.app/)**
 
 ---
 
-## 4. JSX (Çok Önemli)
+## 🚀 Features
 
-JSX, HTML değildir. JavaScript'in bir uzantısıdır.
-
-### Temel Kurallar:
-
-1. Tek bir parent (kapsayıcı) olmalı
-2. `class` yerine `className` kullanılır
-3. JavaScript `{}` içinde yazılır
-
-### Örnek:
-
-```javascript
-const name = "lee";
-return <h1>Merhaba {name}</h1>;
-```
-
-> JSX aslında JavaScript'tir. Arka planda `React.createElement()` fonksiyonuna çevrilir.
+| Feature | Description |
+|---|---|
+| 🏀 **12 Legend Cards** | Kareem, Jordan, Kobe, Magic, Bird, and more with photos and stats |
+| 🔄 **Flip Interaction** | Click a card to toggle between player photo and career statistics |
+| 🔍 **Live Search** | Filter players by name with case-insensitive search |
+| 📊 **Stat Icons** | Points, rebounds, assists, and All-Star counts with React Icons |
+| 📐 **Responsive Grid** | 4 → 2 → 1 column layout across Bootstrap breakpoints |
+| 🧩 **Reusable Components** | Header, Main, and CardContainer split into modules |
+| 📦 **Data-Driven UI** | Player data stored in `data.js` and rendered with `.map()` |
+| 🎨 **NBA Theme** | Full-page basketball court background with branded header |
 
 ---
 
-## 5. React'te Modül (Module) Nedir?
+## 🛠️ Tech Stack
 
-### JavaScript Modülleri:
-
-- Her dosya bir modüldür
-- `export` ve `import` kullanılır
-
-### Örnek:
-
-```javascript
-// Button.js
-export default function Button() {
-  return <button>Tıkla</button>;
-}
-
-// App.js
-import Button from "./Button";
-```
-
-- React projeleri çok sayıda küçük dosyadan oluşur
-- Her component kendi dosyasında olur
-- Kod düzenli ve ölçeklenebilir olur
+| Technology | Role |
+|---|---|
+| **[React 19](https://react.dev/)** | Component-based UI with `useState` hooks |
+| **[Bootstrap 5](https://getbootstrap.com/)** | Utility classes and responsive grid system |
+| **[React Bootstrap](https://react-bootstrap.github.io/)** | Card, Form, Container, Row, Col components |
+| **[React Icons](https://react-icons.github.io/react-icons/)** | Basketball-themed stat icons |
+| **[Create React App](https://create-react-app.dev/)** | Project scaffolding and build tooling |
+| **[Netlify](https://www.netlify.com/)** | Static deployment |
 
 ---
 
-## 6. React'te Modül Sistemi
-
-React, eski script tag mantığıyla çalışmaz.
-
-### Kullanılan Yapı:
-
-- ES Modules
-- `import` / `export`
-- Vite, Webpack gibi bundler'lar
-- Node.js ortamı
-
-
-> React modern JavaScript ortamında çalışır. Bu yüzden import/export kullanırız.
-
----
-
-## 7. React Ne Değildir?
-
-Bunu baştan söylemek gerekir:
-
-- ❌ React framework değildir
-- ❌ Routing'i tek başına yapmaz
-- ❌ API çağrılarını kendi başına yönetmez
-- ❌ Global state'i tek başına çözmez
-
-### Eklenen Araçlar:
-
-- **React Router** - Yönlendirme için
-- **Axios / Fetch** - API çağrıları için
-- **Redux, Zustand, Context** - Global state yönetimi için
-
----
-
-## 8. Virtual DOM (Gerçek DOM Problemi)
-
-### Gerçek DOM Problemi:
-
-Tarayıcıda gördüğümüz her şey DOM'dur. DOM pahalıdır, değiştirmek yavaştır.
-
-### Örnek:
-
-- 1000 satırlık bir liste düşün
-- Sadece 1 satır değişiyor
-- Vanilla JS ile çoğu zaman tüm listeyi etkilersin
-
->  Gerçek DOM'a her dokunuş performans maliyetidir.
-
-### Virtual DOM Nedir? 
-
-> Virtual DOM, gerçek DOM'un hafızadaki (memory) kopyasıdır.
-
-### Önemli Noktalar:
-
-- Tarayıcıya değil, JavaScript objesine dokunur
-- Hızlıdır çünkü memory'de çalışır
-
----
-
-## 9. React Nasıl Çalışır?
-
-1. **State değişir**
-2. **React yeni bir Virtual DOM oluşturur**
-3. **Eski Virtual DOM ile karşılaştırır (diffing)**
-4. **Sadece değişen kısmı bulur**
-5. **Gerçek DOM'da minimum güncelleme yapar**
-
->  React DOM'u komple yenilemez. Sadece gerekli yeri günceller.
-
-Müşteri sadece çorbanın tuzunu değiştiriyor. Mutfakta her şey yeniden pişmez, sadece çorbaya müdahale edilir.
-
->  React, mutfağı dağıtmaz. Sadece gerekli yere dokunur.
-
----
-
-## 11. Proje Yapısı (my-first-app)
-
-### Klasör Yapısı:
+## 📁 Project Structure
 
 ```
-rc-1/
-├── my-first-app/
-│   ├── public/
-│   │   ├── index.html
-│   │   ├── manifest.json
-│   │   └── robots.txt
-│   ├── src/
-│   │   ├── App.css
-│   │   ├── App.js
-│   │   ├── App.test.js
-│   │   ├── index.css
-│   │   ├── index.js
-│   │   ├── reportWebVitals.js
-│   │   └── setupTests.js
-│   ├── .gitignore
-│   ├── package.json
-│   └── README.md
-└── readme.md
+src/
+├── App.jsx
+├── App.css
+├── index.js
+│
+├── assets/
+│   └── nba-legends26.gif       # App preview GIF
+│
+├── components/
+│   ├── Header/
+│   │   └── Header.jsx          # Logo, title, search input
+│   ├── Main/
+│   │   ├── Main.jsx            # Filtered player grid
+│   │   └── main.css
+│   └── CardContainer/
+│       └── CardContainer.jsx   # Flip card with stats
+│
+└── helpers/
+    ├── data.js                 # 12 NBA legend player objects
+    ├── nba-bg.jpg              # Full-page background image
+    └── nba-logo.png            # Header logo
 ```
 
-### Public Klasörü:
+---
 
-- **index.html** - Ana HTML dosyası. React, `<div id="root">` içinde render edilir
-- **manifest.json** - PWA (Progressive Web App) metadata'sı
-- **robots.txt** - Arama motorları için crawler bilgileri
+## 🏗️ Data Flow
 
-### Src Klasörü (Kodun Yazıldığı Yer):
+```
+App (search state)
+ ├── Header  ← inputValue, setInputValue (controlled search input)
+ └── Main    ← value (search query)
+      └── CardContainer × 12  ← name, img, statistics (via props + spread)
+           └── useState (flip toggle per card)
+```
 
-- **index.js** - Giriş noktası. React uygulamasını DOM'a monte eder
-- **App.js** - Ana component. Uygulamanın UI'ını barındırır
-- **App.css** - App component'inin stilleri
-- **index.css** - Küresel stiller
-- **App.test.js** - App component'i için birim testleri
-- **setupTests.js** - Jest test konfigürasyonu
-- **reportWebVitals.js** - Performans metrikleri
+**Search** — `App` holds the search string in `useState`. `Header` updates it on every keystroke; `Main` filters `data.js` and re-renders matching cards.
 
-### Kök Dosyaları:
-
-- **package.json** - Proje metadata'sı ve bağımlılıklar
-- **.gitignore** - Git'e yoksayılacak dosyalar
-- **README.md** - Proje dokümantasyonu
+**Flip** — Each `CardContainer` manages its own `flipped` state. Clicking toggles between the photo view and the statistics list.
 
 ---
 
-## 12. Nasıl Çalışır?
+## 📱 Responsive Design
 
-1. **package.json** → `yarn start` komutu çalıştırılır
-2. **Geliştirme sunucusu başlatılır** → public/index.html yüklenir
-3. **src/index.js çalışır** → `App.js` render edilir
-4. **Uygulama tarayıcıda görünür** → `http://localhost:3000`
+| Breakpoint | Layout |
+|---|---|
+| **≥ 992px (lg)** | 4-column card grid |
+| **768px – 991px (md)** | 2-column card grid |
+| **< 768px (xs / sm)** | Single-column card grid |
 
 ---
 
-## 13. Temel Komutlar
+## ⚙️ Getting Started
 
-### Projeyi Başlatmak:
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) ≥ 18
+
+### Installation
 
 ```bash
-yarn start
+git clone https://github.com/cankurtduygu/NBA-legends.git
+cd NBA-legends
+npm install
+npm start
 ```
 
-### Production Build Almak:
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production Build
 
 ```bash
-yarn run build
+npm run build
 ```
 
 ---
 
+## 🌐 Deployment
 
+The app is deployed on **Netlify** as a static Create React App build.
 
-## 📁 Proje Yapısı
+To deploy your own instance, connect the repo to Netlify and set:
 
-```
-my-app/
-├── public/           # Statik dosyalar (index.html, resimler)
-├── src/              # Kaynak kodlar
-│   ├── App.js        # Ana component
-│   ├── index.js      # Giriş noktası
-│   └── components/   # Diğer componentler
-├── package.json      # Proje bağımlılıkları
-└── README.md         # Proje açıklaması
-```
+- **Build command:** `npm run build`
+- **Publish directory:** `build`
 
 ---
 
-## 🧩 Component Nedir?
+## 🚀 Future Improvements
 
-Component, kullanıcı arayüzünün yeniden kullanılabilir parçalarıdır. React'ta her şey componentlerden oluşur.
-
-### Component Türleri:
-
-#### 1️⃣ Function Component (Modern Yaklaşım - Önerilen):
-```jsx
-function Merhaba() {
-  return <h1>Merhaba Dünya!</h1>;
-}
-```
-
-#### 2️⃣ Arrow Function Component:
-```jsx
-const Merhaba = () => {
-  return <h1>Merhaba Dünya!</h1>;
-}
-```
-
-### 📦 Component Kullanımı:
-```jsx
-import Merhaba from './Merhaba';
-
-function App() {
-  return (
-    <div>
-      <Merhaba />
-    </div>
-  );
-}
-```
+- [ ] Empty state message when search returns no results
+- [ ] Mobile-friendly search input width
+- [ ] Keyboard accessibility for card flip
+- [ ] Image lazy loading for player photos
+- [ ] Player detail modal or dedicated page
+- [ ] Sort / filter by stat category
 
 ---
 
-## 🎨 JSX (JavaScript XML) Nedir?
+## 🤝 Contributing
 
-JSX, JavaScript içinde HTML yazmamızı sağlayan bir sözdizimi uzantısıdır.
-
-### ✅ JSX Kuralları:
-
-1. **Tek Kapsayıcı Element**: Tüm elementler tek bir parent element içinde olmalıdır
-```jsx
-// ❌ YANLIŞ
-return (
-  <h1>Başlık</h1>
-  <p>Paragraf</p>
-);
-
-// ✅ DOĞRU
-return (
-  <div>
-    <h1>Başlık</h1>
-    <p>Paragraf</p>
-  </div>
-);
-
-// ✅ Fragment kullanımı (boş tag)
-return (
-  <>
-    <h1>Başlık</h1>
-    <p>Paragraf</p>
-  </>
-);
-```
-
-2. **JavaScript Kullanımı**: Süslü parantez {} içinde JavaScript kodu yazabilirsiniz
-```jsx
-const isim = "Ahmet";
-const yas = 25;
-
-return (
-  <div>
-    <h1>Benim adım {isim}</h1>
-    <p>Yaşım: {yas}</p>
-    <p>5 yıl sonra: {yas + 5} yaşında olacağım</p>
-  </div>
-);
-```
-
-3. **className Kullanımı**: HTML'deki `class` yerine `className` kullanılır
-```jsx
-// ❌ YANLIŞ
-<div class="container">
-
-// ✅ DOĞRU
-<div className="container">
-```
-
-4. **CamelCase Yazım**: HTML attribute'ları camelCase ile yazılır
-```jsx
-<button onClick={tiklama}>Tıkla</button>
-<input onChange={degisim} />
-<label htmlFor="input-id">Label</label>
-```
+1. Fork the repository
+2. `git checkout -b feat/your-feature`
+3. `git commit -m "feat: your change"`
+4. `git push origin feat/your-feature`
+5. Open a Pull Request
 
 ---
 
-## 🎨 React'ta Styling (Stil Verme)
+Built with React · Bootstrap · Create React App
 
-### 1️⃣ Inline Styling:
-```jsx
-const App = () => {
-  return (
-    <h1 style={{ 
-      color: 'blue', 
-      fontSize: '24px',
-      backgroundColor: 'yellow'
-    }}>
-      Merhaba React!
-    </h1>
-  );
-}
-```
-
-### 2️⃣ Internal/Object Styling:
-```jsx
-const App = () => {
-  const stilim = {
-    color: 'red',
-    fontSize: '30px',
-    fontFamily: 'Arial',
-    border: '2px solid blue'
-  };
-
-  return <h1 style={stilim}>Styled Text</h1>;
-}
-```
-
-### 3️⃣ External CSS (En Yaygın Kullanım):
-```jsx
-// App.css
-import './App.css';
-
-function App() {
-  return <h1 className="baslik">Başlık</h1>;
-}
-```
-
-```css
-/* App.css */
-.baslik {
-  color: red;
-  font-size: 24px;
-}
-```
-
----
-
-### ⚠️ Dikkat Edilmesi Gerekenler:
-
-1. **Component isimleri büyük harfle başlamalı**: `App`, `Navbar`, `Footer`
-2. **Bir component sadece bir element döndürebilir** (parent element gerekli)
-3. **JSX içinde JavaScript kullanmak için** süslü parantez `{}` kullanın
-4. **Self-closing taglar** slash ile kapatılmalı: `<img />`, `<br />`, `<hr />`
-5. **HTML class** yerine **className** kullanın
-6. **Yorum satırı** JSX içinde: `{/* yorum */}`
-
-### 🎯 Best Practices (En İyi Uygulamalar):
-
-- Her component için ayrı dosya oluşturun
-- Component isimlerini açıklayıcı yapın
-- Dosya ismi ile component ismi aynı olsun: `Navbar.jsx` → `Navbar`
-- CSS dosyalarını componentlerin yanında tutun
-- Yeniden kullanılabilir componentler oluşturun
-
----
-
-## 🔗 Faydalı Kaynaklar
-
-- [React Resmi Dokümantasyonu](https://react.dev/)
-- [React Tutorial](https://react.dev/learn)
-- [Create React App](https://create-react-app.dev/)
-
----
+⭐ **Star this repo if you find it useful!**
